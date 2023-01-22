@@ -1,0 +1,8 @@
+
+
+#https://datalemur.com/questions/total-drugs-sales
+
+select manufacturer, concat('$', round(sum(total_sales)/100000), ' ','million') as sale  from pharmacy_sales 
+group by manufacturer
+ORDER BY sum(total_sales) DESC;
+
